@@ -1,0 +1,45 @@
+﻿@page
+@model MultiCsino.Pages.addItemModel
+@{
+}
+
+
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+
+
+<div class="container">
+    <h3>Add Items</h3>
+    <hr />
+    <br />
+    <form method="post">
+        <div class="row">
+            <div class="col-md-4">
+                <label asp-for="item.Name"></label>
+                <input asp-for="item.Name" class="form-control" />
+                <span class="alert-danger" asp-validation-for="item.Name"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label asp-for="item.Quantity"></label>
+                <input asp-for="item.Quantity" class="form-control" />
+                <span class="alert-danger" asp-validation-for="item.Quantity"></span>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-4">
+                <label asp-for="item.Price"></label>
+                <input asp-for="item.Price" class="form-control" />
+                <span class="alert-danger" asp-validation-for="item.Price"></span>
+            </div>
+        </div>
+        <br />
+        <input type="submit" value="Save" class="btn btn-primary" />
+        <a class="btn btn-default" href="/viewItems">Cancel</a>
+    </form>
+</div>
+

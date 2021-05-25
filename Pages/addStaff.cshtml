@@ -1,0 +1,60 @@
+﻿@page
+@model MultiCsino.Pages.addStaffModel
+@{
+}
+
+
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+
+
+<div class="container">
+    <h3>Add Staff</h3>
+    <hr />
+    <br />
+    <form method="post">
+        <div class="row">
+            <div class="col-md-4">
+                <label asp-for="staff.Name"></label>
+                <input asp-for="staff.Name" class="form-control" />
+                <span class="alert-danger" asp-validation-for="staff.Name"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label asp-for="staff.Address"></label>
+                <input asp-for="staff.Address" class="form-control" />
+                <span class="alert-danger" asp-validation-for="staff.Address"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label asp-for="staff.Designation"></label>
+                <input asp-for="staff.Designation" class="form-control" />
+                <span class="alert-danger" asp-validation-for="staff.Designation"></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <label asp-for="staff.Phoneno"></label>
+                <input asp-for="staff.Phoneno" class="form-control" />
+                <span class="alert-danger" asp-validation-for="staff.Phoneno"></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <label asp-for="staff.Salary"></label>
+                <input asp-for="staff.Salary" cl class="form-control" />
+                <span class="alert-danger" asp-validation-for="staff.Salary"></span>
+            </div>
+        </div>
+        <br />
+        <input type="submit" value="Save" class="btn btn-primary" />
+        <a class="btn btn-default" href="/viewStaff">Cancel</a>
+    </form>
+</div>
+

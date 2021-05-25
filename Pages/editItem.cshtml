@@ -1,0 +1,39 @@
+﻿@page "{id:int}"
+@model MultiCsino.Pages.editItemModel
+@{
+}
+
+
+
+
+<div class="container">
+    <h3>Edit Items</h3>
+    <hr />
+    <br />
+    <form method="post">
+        <input asp-for="item.itemID" type="hidden" />
+        <div class="row">
+            <div class="col-md-4">
+                <label asp-for="item.Name"></label>
+                <input asp-for="item.Name" class="form-control" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label asp-for="item.Quantity"></label>
+                <input asp-for="item.Quantity" class="form-control" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <label asp-for="item.Price"></label>
+                <input asp-for="item.Price" class="form-control" />
+            </div>
+        </div>
+        
+        <br/>
+        <input type="submit" value="Save" class="btn btn-primary" />
+        <a class="btn btn-default" href="/viewItems">Cancel</a>
+    </form>
+</div>  
